@@ -36,7 +36,7 @@
     font-size: 1.9rem;
 }
 
-.hero .conetnt p:nth-child(3) {
+.hero .content p:nth-child(3) {
     font-size: 5rem;
     font-weight: 700;
 }
@@ -57,4 +57,14 @@
 .hero .button:hover {
     background-color: var(--secondary-dark);
     border: 1px solid var(--secondary-dark);
+}
+
+@media screen and (max-width: 940px) {
+    .hero .content p:nth-child(3){
+        font-size: 2.6rem;
+    }
+
+    .hero .content p:nth(4) {
+        font-size: 1.6rem;
+    }
 }
