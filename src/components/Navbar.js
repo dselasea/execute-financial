@@ -6,9 +6,8 @@ import "./Navbar.css"
 const Navbar = () => {
 
     const [click, setClick] = useState(false);
-    const handleClick = () => {
-        return setClick(!click);
-    }
+    const handleClick = () => setClick(!click);
+    
   return (
     <div className='header'>
         <nav className="navbar">
