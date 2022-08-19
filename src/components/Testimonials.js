@@ -13,7 +13,7 @@ function Testimonials() {
     ]
 
   return (
-    <div className='testimonials'>
+    <div className='testimonials' id='testimonials'>
         <div className="container">
             <h2>Testimonials</h2>
             <span className="line"></span>

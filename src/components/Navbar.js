@@ -2,11 +2,14 @@ import React, {useState} from 'react'
 import {FaBars, FaTimes} from "react-icons/fa"
 import logo from "./images/logo.png"
 import "./Navbar.css"
+import NavList from './NavList'
 
 const Navbar = () => {
 
     const [click, setClick] = useState(false);
+
     const handleClick = () => setClick(!click);
+    const closeMenu = () => setClick(false);
     
   return (
     <div className='header'>
@@ -16,10 +19,7 @@ const Navbar = () => {
                 {click ? <FaTimes size={30} style={{color: "#fff"}} /> : <FaBars size={30} style={{color: "#fff"}}/>}
             </div>
             <ul className={click ? "nav-menu active" : "nav-menu"}>
-                <li className='nav-item'><a href="/">Home</a></li>
-                <li className='nav-item'><a href="/">About</a></li>
-                <li className='nav-item'><a href="/">Testimonials</a></li>
-                <li className='nav-item'><a href="/">Demo</a></li>
+                <NavList closeMenu={closeMenu}/>
             </ul>
         </nav>
     </div>
