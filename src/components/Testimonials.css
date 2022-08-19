@@ -37,3 +37,24 @@
     font-size: 1.1rem;
     margin: 12px;
 }
+
+.testimonials .card span {
+    color: var(--primary-color);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+@media screen and (max-width: 940px){
+    .testimonials .container {
+        width: 100%;
+    }
+
+    .testimonials .container .content {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonials .card {
+        max-width: 100%;
+        margin: 1rem;
+    }
+}
