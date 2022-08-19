@@ -7,16 +7,21 @@
     z-index: -1;
     transition: .3s ease-in;
     overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.0);
 }
 
 .header .navbar {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     max-width: 1240px;
     margin: auto;
     height: 100%;
     padding: 0 1rem;
+}
+
+.header .nav-menu a {
+    color: #fff;
 }
 
 .header .navbar img {
@@ -43,7 +48,7 @@
     display: none;
 }
 
-@media screen and(max-width: 940px) {
+@media screen and (max-width: 940px) {
     .header {
         max-width: 100%;
         background-color: rgba(0, 0, 0, 0.9);
@@ -59,11 +64,26 @@
 
     .nav-menu {
         position: fixed;
-        left: 0;
-        top: 5rem;
+        left: -100%;
+        top: 90px;
         flex-direction: column;
         background-color: rgba(0, 0, 0, 0.9);
         width: 100%;
         height: 90vh;
+        z-index: 999;
+        text-align: center;
+        transition: .3s;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 1.5rem 0;
+    }
+
+    .header .navbar img {
+        width: 150px;
     }
 }
